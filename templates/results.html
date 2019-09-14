@@ -1,0 +1,75 @@
+{% extends 'layout.html' %}
+
+{% block title %}Breast Cancer Prediction Results{% endblock %}
+
+{% block content %}
+<div class="results">
+  {% if prediction == 0 %}
+    <!-- Malignant (> 50% probability) -->
+    <div class="results-text notification is-danger">
+      <div class="results-main">
+        <div class="results-icon">
+          <!-- <i class="fas fa-exclamation-circle"></i> -->
+          <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <div class="results-large-text">
+          Malignant
+        </div>
+      </div>
+      This tumor is predicted to be malignant, with
+      {{ (probabilities[0] * 100) | round(4) }}%
+      probability.
+    </div>
+  {% else %}
+    <!-- Low Risk -->
+    <div class="results-text notification is-success">
+      <div class="results-main">
+        <div class="results-icon">
+          <i class="fas fa-check-square"></i>
+        </div>
+        <div class="results-large-text">
+          Benign
+        </div>
+      </div>
+      This tumor is predicted to be benign, with
+      {{ (probabilities[1] * 100) | round(4) }}%
+      probability.
+    </div>
+  {% endif %}
+
+  <div class="back-button container has-text-centered">
+    <a class="button is-small is-text" href=".{{ url_for('.form', **form_values) }}">
+      <span class="icon">
+        <i class="fas fa-edit"></i>
+      </span>
+      <span>Edit Values</span>
+    </a>
+    <a class="button is-small is-text" href=".{{ url_for('.form') }}">
+      <span class="icon">
+        <i class="fas fa-undo"></i>
+      </span>
+      <span>Try Again</span>
+    </a>
+  </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+<div class="container has-text-centered">
+  <div class="input-values">
+    <div class="is-italic has-text-grey">
+      Input values:
+    </div>
+    <div class="field is-grouped is-grouped-multiline">
+      {% for field, value in input_values.items() %}
+        <div class="control">
+          <div class="tags has-addons are-small">
+            <span class="tag">{{ field }}</span>
+            <span class="tag is-dark">{{ value }}</span>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}

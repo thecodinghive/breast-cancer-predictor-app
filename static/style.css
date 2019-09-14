@@ -1,0 +1,60 @@
+/* Header Styles */
+#logo {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+footer .disclaimer {
+}
+
+/* Results Page */
+.results {
+  margin: 0 auto;
+}
+
+.results .results-main {
+  font-size: 65px;
+  display: flex;
+  justify-content: center;
+}
+
+.results .results-main .results-icon {
+  /* display: inline-block; */
+}
+
+.results .results-main .results-large-text {
+  display: inline-block;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.results .results-text {
+  text-align: center;
+  max-width: 580px;
+  margin: 20px auto 0;
+}
+
+.results .back-button {
+  margin-top: 50px;
+}
+
+/* Results Page: Input Values Section */
+.input-values {
+  margin-bottom: 20px;
+}
+
+.input-values > div {
+  margin-bottom: 20px;
+}
+
+/* Center list of tags */
+.input-values .field.is-grouped {
+  justify-content: center;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .results .results-main {
+    font-size: 80px;
+  }
+}

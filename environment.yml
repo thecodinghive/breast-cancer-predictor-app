@@ -1,0 +1,10 @@
+name: flask-breast-cancer
+
+# nomkl is needed to avoid issues deploying to Heroku
+dependencies:
+  - nomkl
+  - flask
+  - joblib
+  - scikit-learn
+  - numpy
+  - gunicorn

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- We are using Bulma to provide some nice styles: https://bulma.io/documentation/ -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+  <link rel="stylesheet" href="./static/style.css">
+
+  {% block head %}{% endblock %}
+
+  <title>{% block title %}The Coding Hive{% endblock %}</title>
+</head>
+
+<body>
+  <section class="hero is-warning is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <div id="logo">
+          <img src="./static/logo-text.png" alt="The Coding Hive Logo" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <h1 class="title is-size-3-tablet is-size-4-mobile has-text-centered	">
+        <i class="fas fa-file-medical-alt"></i>
+        <!-- TODO: Change to your own app name. -->
+        Breast Cancer Classifier
+      </h1>
+
+      {% block content %}{% endblock %}
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      {% block footer %}{% endblock %}
+
+      <p class="disclaimer is-size-7">
+        <em>
+          * Note that this tool is for informational purposes only and does not
+            constitute medical advice. Please consult your doctor.
+        </em>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

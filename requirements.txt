@@ -1,0 +1,15 @@
+certifi==2019.6.16
+Click==7.0
+Flask==1.1.1
+gunicorn==19.9.0
+itsdangerous==1.1.0
+Jinja2==2.10.1
+joblib==0.13.2
+MarkupSafe==1.1.1
+numpy==1.16.4
+pipenv==2018.11.26
+scikit-learn==0.21.2
+scipy==1.3.0
+virtualenv==16.6.1
+virtualenv-clone==0.5.3
+Werkzeug==0.15.4

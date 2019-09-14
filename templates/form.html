@@ -1,0 +1,73 @@
+{% extends 'layout.html' %}
+
+{% block title %}Breast Cancer Risk Prediction{% endblock %}
+
+{% block content %}
+<form method="post" action="./process_form">
+  <div class="columns">
+    <div class="column is-half is-offset-one-quarter">
+      <div class="notification">
+        Welcome to our breast cancer risk prediction tool!
+        Enter your information below, and using machine learning,
+        we will predict your risk.
+      </div><div class="columns is-mobile">
+        <div class="column">
+          <div class="field">
+            <label class="label">Worst Perimeter</label>
+            <div class="control">
+              <input class="input" name="worst_perimeter" type="number" min="50" max="252" step="0.01" value="{{ form_values['worst_perimeter'] }}" required>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <label class="label">Worst Concave Points</label>
+            <div class="control">
+              <input class="input" name="worst_concave_points" type="number" min="0" step="0.0001" value="{{ form_values['worst_concave_points'] }}" required>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-mobile">
+        <div class="column">
+          <div class="field">
+            <label class="label">Worst Radius</label>
+            <div class="control">
+              <input class="input" name="worst_radius" type="number" min="0" step="0.01" value="{{ form_values['worst_radius'] }}" required>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <label class="label">Mean Concave Points</label>
+            <div class="control">
+              <input class="input" name="mean_concave_points" type="number" min="0" step="0.00001" value="{{ form_values['mean_concave_points'] }}" required>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-mobile">
+        <div class="column">
+          <div class="field">
+            <label class="label">Worst Concavity</label>
+            <div class="control">
+              <input class="input" name="worst_concavity" type="number" min="0" step="0.0001" value="{{ form_values['worst_concavity'] }}" required>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+        </div>
+      </div>
+
+      <div class="field is-grouped">
+        <div class="control">
+          <input type="submit" class="button is-link">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</form>
+{% endblock %}
