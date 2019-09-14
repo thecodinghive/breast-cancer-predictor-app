@@ -1,7 +1,7 @@
 # Running on Heroku: Deploy
 
 * Create a free Heroku account: https://signup.heroku.com/
-* Visit the Github repo: https://github.com/thecodinghive/heart-disease-predictor-app
+* Visit the Github repo: https://github.com/thecodinghive/breast-cancer-predictor-app
 * Optional: Create or use existing Github account to fork this repository, so that you can edit the app & upload your own model.
 
 Click this button to deploy the app:

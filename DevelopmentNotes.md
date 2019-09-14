@@ -36,7 +36,7 @@ Next, we will need to setup our app on Heroku:
 * Create a free Heroku account.
 * Create a new application.
 * Run `heroku login` locally.
-* Follow instructions to deploy: https://dashboard.heroku.com/apps/coding-hive-heart-disease/deploy/heroku-git
+* Follow instructions to deploy: https://dashboard.heroku.com/apps/breastcancerpredictor/deploy/heroku-git
 
 References:
 
